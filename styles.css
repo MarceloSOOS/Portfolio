@@ -1,0 +1,64 @@
+.seta {
+    width: 50px;
+    line-height: 50px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos para a transformação */
+  }
+  
+  /* Efeito de deslize quando o mouse passa por cima */
+.seta:hover {
+    transform: translateX(10px); /* Move o elemento 50 pixels para a direita */
+  }
+
+.seta2 {
+    width: 50px;
+    line-height: 50px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos para a transformação */
+  }
+  
+  /* Efeito de deslize quando o mouse passa por cima */
+.seta2:hover {
+    transform: translateX(10px); /* Move o elemento 50 pixels para a direita */
+  }
+
+.seta3 {
+    width: 50px;
+    line-height: 50px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos para a transformação */
+  }
+  
+  /* Efeito de deslize quando o mouse passa por cima */
+.seta3:hover {
+    transform: translateX(10px); /* Move o elemento 50 pixels para a direita */
+  }
+
+.zoomable-image1 {
+    width: 300px; /* Defina a largura da imagem */
+    transition: transform 0.6s ease; /* Adicione uma transição suave */
+  }
+  
+  /* Quando o mouse passar por cima da imagem, aplique a transformação */
+.zoomable-image1:hover {
+    transform: scale(1.015); /* Aumente o tamanho da imagem em 20% ao passar o mouse */
+  }
+
+.zoomable-image2 {
+    width: 300px; /* Defina a largura da imagem */
+    transition: transform 0.6s ease; /* Adicione uma transição suave */
+  }
+  
+  /* Quando o mouse passar por cima da imagem, aplique a transformação */
+.zoomable-image2:hover {
+    transform: scale(1.015); /* Aumente o tamanho da imagem em 20% ao passar o mouse */
+  }
+
+.zoomable-image3 { /* Defina a largura da imagem */
+    transition: transform 0.6s ease; /* Adicione uma transição suave */
+  }
+  
+  /* Quando o mouse passar por cima da imagem, aplique a transformação */
+.zoomable-image3:hover {
+    transform: scale(1.015); /* Aumente o tamanho da imagem em 20% ao passar o mouse */
+  }
+
+
+  
