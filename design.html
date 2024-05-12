@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css">
+      <title>Design</title>
+      <style>
+         :root {
+            --ffsd: 0px;
+            --1vw: calc((100vw - var(--sbw, 0px)) / 100);
+            --1vh: var(--inner1Vh, 1vh);
+         }
+
+         @media (prefers-reduced-motion: reduce) {
+            .animated {
+               animation: none !important;
+            }
+         }
+
+         html {
+            zoom: var(--rzf, 1);
+            font-size: max(calc(min(var(--1vw, 1vw), 13.66px) * var(--rfso, 1)), var(--minfs, 0px));
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
+         }
+
+         body {
+            font-size: calc(1rem * var(--bfso, 1));
+         }
+
+         body,
+         html,
+         p,
+         ul,
+         ol,
+         li {
+            margin: 0;
+            padding: 0;
+            font-synthesis: none;
+            font-kerning: none;
+            font-variant-ligatures: none;
+            font-feature-settings: "kern"0, "calt"0, "liga"0, "clig"0, "dlig"0, "hlig"0;
+            font-family: unset;
+            -webkit-font-smoothing: subpixel-antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: geometricprecision;
+            white-space: normal;
+         }
+
+         li {
+            text-align: unset;
+         }
+
+         a {
+            text-decoration: none;
+            color: inherit;
+         }
+
+         img {
+            -webkit-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-touch-callout: none;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-Regular15652694009216114712.08b4e2ab750a500e71fc04022e8a4ae7.woff2);
+            font-style: normal;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-Bold6946573192836865093.9b35f72ece613429fbcefe48d64ec64f.woff2);
+            font-style: normal;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-Italic815033120684447682.dc2342834c01412124ec81cadc59480c.woff2);
+            font-style: italic;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-BoldItalic1361374547925218949.39ad6d7c629e6e87ec833d8edf180d9e.woff2);
+            font-style: italic;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-ExtraLight729349764648306374.c91b7497f36d9523e78c75dfb5dc76e4.woff2);
+            font-style: normal;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-ExtraLightItalic14161074860137782.949e2c81ad381038b8565afc19c058e8.woff2);
+            font-style: italic;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-ExtraLight729349764648306374.c91b7497f36d9523e78c75dfb5dc76e4.woff2);
+            font-style: normal;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-ExtraLightItalic14161074860137782.949e2c81ad381038b8565afc19c058e8.woff2);
+            font-style: italic;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-Light16522210347074654306.640172ad10cfa55584049ec01958664e.woff2);
+            font-style: normal;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-LightItalic6008422942596537870.91e4b39d6d2299f8211603bbad87a732.woff2);
+            font-style: italic;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-Medium3121389244069962839.c6d37fe665db090b62f32d9c6dde0fea.woff2);
+            font-style: normal;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-MediumItalic12980910724873289023.39992a4b2a93ac70b7735ad48006acb6.woff2);
+            font-style: italic;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-SemiBold14408689573266047115.9bc685209e7baf5cdce076d080441d0c.woff2);
+            font-style: normal;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-SemiBoldItalic4618653902231991891.1170fb00579660b6b94a424bf69acd23.woff2);
+            font-style: italic;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-ExtraBold18076556537134319846.de8dbb8b56d6e2109fce098da6d54c2b.woff2);
+            font-style: normal;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-ExtraBoldItalic892593218484463781.5a29278e11e95ef1beb08f00510581d8.woff2);
+            font-style: italic;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-Black15036636258084601151.96619790792aa06e9ae6a4e3f4918d07.woff2);
+            font-style: normal;
+            font-weight: 900;
+         }
+
+         @font-face {
+            font-family: YAFdJoNRMmU-1;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJoNRMmU/0/Nunito-BlackItalic17394527705261599712.4ec3e472913bd80b7c39155a155e8221.woff2);
+            font-style: italic;
+            font-weight: 900;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: normal;
+            font-weight: 900;
+         }
+
+         @font-face {
+            font-family: YAEEKJVWzzw-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAEEKJVWzzw/0/Holiday.a7751c47b1a4a19caa3408158cde8f64.83ca384bee08f8d59fe76df4410ada7d.woff2);
+            font-style: italic;
+            font-weight: 900;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-Regular.5c41d7566d903b1b3684876.226618464330c99b64fcaf1d7142c1e7.woff2);
+            font-style: normal;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-Bold.3a947823b9ae357ee03f70de51.e532966f486645f74efaf7432e1d01c2.woff2);
+            font-style: normal;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-RegularItalic.f0f5fc29312b9fdb0.3caeb8725430f400cbc24c4707d72558.woff2);
+            font-style: italic;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-BoldItalic.7a6e87000efcb4c450fa.64dfd027222a62438bc2a4d821786c71.woff2);
+            font-style: italic;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-Light.9dea3ba41b46d8a450c77a0bf.01bb491de5070339bf99832ce44c544d.woff2);
+            font-style: normal;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-LightItalic.8ab728aad9406bb889a.a75cdabbb8dcdf033cc6b207c91608bf.woff2);
+            font-style: italic;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-Light.9dea3ba41b46d8a450c77a0bf.01bb491de5070339bf99832ce44c544d.woff2);
+            font-style: normal;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-LightItalic.8ab728aad9406bb889a.a75cdabbb8dcdf033cc6b207c91608bf.woff2);
+            font-style: italic;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-Light.9dea3ba41b46d8a450c77a0bf.01bb491de5070339bf99832ce44c544d.woff2);
+            font-style: normal;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-LightItalic.8ab728aad9406bb889a.a75cdabbb8dcdf033cc6b207c91608bf.woff2);
+            font-style: italic;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-Regular.5c41d7566d903b1b3684876.226618464330c99b64fcaf1d7142c1e7.woff2);
+            font-style: normal;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-RegularItalic.f0f5fc29312b9fdb0.3caeb8725430f400cbc24c4707d72558.woff2);
+            font-style: italic;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-Bold.3a947823b9ae357ee03f70de51.e532966f486645f74efaf7432e1d01c2.woff2);
+            font-style: normal;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-BoldItalic.7a6e87000efcb4c450fa.64dfd027222a62438bc2a4d821786c71.woff2);
+            font-style: italic;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-ExtraBold.03f9aaf16ab53f4b06a09.a26fb2e545ea4d91b9808446bd10482b.woff2);
+            font-style: normal;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-ExtraBoldItalic.8b516c875dce3ec.93216375a15a0334d096957c3f1f2f0f.woff2);
+            font-style: italic;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-ExtraBold.03f9aaf16ab53f4b06a09.a26fb2e545ea4d91b9808446bd10482b.woff2);
+            font-style: normal;
+            font-weight: 900;
+         }
+
+         @font-face {
+            font-family: YAFdJt8dAY0-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YAFdJt8dAY0/0/OpenSans-ExtraBoldItalic.8b516c875dce3ec.93216375a15a0334d096957c3f1f2f0f.woff2);
+            font-style: italic;
+            font-weight: 900;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/Arimo.7ac02a544211773d9636e056e9da6c35.7.f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBold.927b7dca5b947f69cb8e835f7f743d.98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoItalic.fa87472a877e70c5bce22e42be5c.d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 400;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBoldItalic.08fb930e5cf38bab811efa91.1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 700;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/Arimo.7ac02a544211773d9636e056e9da6c35.7.f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoItalic.fa87472a877e70c5bce22e42be5c.d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 100;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/Arimo.7ac02a544211773d9636e056e9da6c35.7.f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoItalic.fa87472a877e70c5bce22e42be5c.d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 200;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/Arimo.7ac02a544211773d9636e056e9da6c35.7.f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoItalic.fa87472a877e70c5bce22e42be5c.d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 300;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/Arimo.7ac02a544211773d9636e056e9da6c35.7.f8f199f09526f79e87644ed227e0f651.woff2);
+            font-style: normal;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoItalic.fa87472a877e70c5bce22e42be5c.d257a7100844bc3f98c9021168b6249e.woff2);
+            font-style: italic;
+            font-weight: 500;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBold.927b7dca5b947f69cb8e835f7f743d.98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBoldItalic.08fb930e5cf38bab811efa91.1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 600;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBold.927b7dca5b947f69cb8e835f7f743d.98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBoldItalic.08fb930e5cf38bab811efa91.1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 800;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBold.927b7dca5b947f69cb8e835f7f743d.98c4d2c0223fc8474641c77f923528e9.woff2);
+            font-style: normal;
+            font-weight: 900;
+         }
+
+         @font-face {
+            font-family: YACgEZ1cb1Q-0;
+            src: url(https://s3.amazonaws.com/font-public.canva.com/YACgEZ1cb1Q/0/ArimoBoldItalic.08fb930e5cf38bab811efa91.1060345c54d396e76d73f1da7ee200bd.woff2);
+            font-style: italic;
+            font-weight: 900;
+         }
+
+         @media (max-width: 375px) {
+            #e9gQFck7vgtSoD6q {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #u6a6l88EL1qAnNkB {
+               grid-template-columns: 0 663.14088941%;
+               left: -281.57044471%;
+               grid-template-rows: 0 100%;
+            }
+
+            #PKxfCpjYbI5eTzkf {
+               display: none;
+            }
+
+            #P5gUUDE8ocmHCP1j {
+               display: none;
+            }
+
+            #oHarnI9nFAiRIqcg {
+               display: none;
+            }
+
+            #Vch1mCPDoLott4Gz {
+               display: none;
+            }
+
+            #LJOPzbsghZxJ6Esc {
+               display: block;
+            }
+
+            #UuNi6aJ5GDV5SgVV {
+               grid-area: 2 / 2 / 9 / 9;
+               position: relative;
+            }
+
+            #k9rE8rYT4aWdxodk {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(22.85734971em - var(--ffsd)));
+            }
+
+            #qqSn8eCPJkoOXPrk {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 22.85734971em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #UhBWUqRmHEhPjMii {
+               min-width: 78.8rem;
+            }
+
+            #H5Ph0rNjUS4jQLO3 {
+               grid-area: 3 / 3 / 4 / 6;
+               position: relative;
+            }
+
+            #vPPuxrYtVpTlCE2N {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(7.82221333em - var(--ffsd)));
+            }
+
+            #jfGIQ9rIDvXJVKql {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 7.82221333em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #vAOFjfVoYPpX1Axx {
+               min-width: 78.8rem;
+            }
+
+            #mwwSXMcIrCvjIWKM {
+               grid-area: 5 / 4 / 6 / 7;
+               position: relative;
+            }
+
+            #Yxpjl69iOLU9Ie1B {
+               grid-area: 2 / 2 / 3 / 8;
+               position: relative;
+            }
+
+            #K4j9U3dJtI5aq9Y7 {
+               grid-area: 4 / 3 / 5 / 9;
+               position: relative;
+            }
+
+            #YhJnjSRlNIjJYaBp {
+               grid-area: 6 / 4 / 7 / 10;
+               position: relative;
+            }
+
+            #wHf3oti0vvRtTWuk {
+               grid-area: 8 / 5 / 9 / 11;
+               position: relative;
+            }
+
+            #Gi578jtSPtPhySy4 {
+               grid-area: 10 / 6 / 11 / 12;
+               position: relative;
+            }
+
+            #VEoLmMqFWom00Tia {
+               grid-area: 12 / 7 / 13 / 13;
+               position: relative;
+            }
+
+            #zJMF4IPJKJeZbspk {
+               grid-template-columns: 0 0 0 0 0 0 78.66666667rem 0 0 0 0 0;
+               grid-template-rows: 0 minmax(78.66666667rem, max-content) minmax(6.4rem, max-content) minmax(78.66666667rem, max-content) minmax(6.4rem, max-content) minmax(78.66666667rem, max-content) minmax(6.74913179rem, max-content) minmax(78.66666667rem, max-content) minmax(6.4rem, max-content) minmax(78.66666667rem, max-content) minmax(6.4rem, max-content) minmax(78.66666667rem, max-content);
+            }
+
+            #dYvu1gxRVggdW0iT {
+               grid-template-columns: 0 6.4rem 0 0 78.66666667rem 0 0 6.4rem;
+               grid-template-rows: 0 minmax(10.49067415rem, max-content) minmax(27.25227107rem, max-content) minmax(5.50250625rem, max-content) minmax(9.36659168rem, max-content) minmax(16.10267717rem, max-content) minmax(504.34913179rem, max-content) minmax(10.49067415rem, max-content);
+            }
+
+            #ywhbMvH9xTIYHxmE {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #yLdLr3ABo9gdozF5 {
+               grid-template-columns: 4.26666667rem 91.46666667rem 4.26666667rem;
+               grid-template-rows: minmax(5.08265919rem, max-content) minmax(583.55452625rem, max-content) minmax(5.08265919rem, max-content);
+            }
+
+            #y9CX1ernqNiN3GYC {
+               min-height: calc(46.74847013 * var(--1vh, 1vh));
+            }
+
+            #A6krwxCBK8bVUKNz {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qqObgxryCqCHUcPI {
+               grid-template-columns: 0 769.40191121%;
+               left: -334.70095561%;
+               grid-template-rows: 0 100%;
+            }
+
+            #BKuEeqT2Ucd44JRA {
+               display: none;
+            }
+
+            #P3l4HhIqt48V11js {
+               display: none;
+            }
+
+            #VXHXNNvj7bYupo50 {
+               display: none;
+            }
+
+            #qGTaJlQJQakK3LOS {
+               display: none;
+            }
+
+            #ENdn7MGBR6dVlygN {
+               display: block;
+            }
+
+            #SzlVJR82bq7Y2qca {
+               grid-area: 2 / 2 / 17 / 17;
+               position: relative;
+            }
+
+            #OwmRBr7wheM6oCP0 {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(7.82221333em - var(--ffsd)));
+            }
+
+            #HNcxWGqqNyOk7yXF {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 7.82221333em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #Ne8NHS5xRPsK1nhL {
+               min-width: 78.8rem;
+            }
+
+            #Wcwy3sqpl1tY6dRv {
+               grid-area: 3 / 3 / 4 / 10;
+               position: relative;
+            }
+
+            #fLr9k3AcopHbkgqV {
+               grid-area: 5 / 4 / 6 / 11;
+               position: relative;
+            }
+
+            #lLo8RbGu0qTg7umz {
+               grid-area: 7 / 5 / 8 / 12;
+               position: relative;
+            }
+
+            #C5YQRCGNxC4ueOB5 {
+               grid-area: 9 / 6 / 10 / 13;
+               position: relative;
+            }
+
+            #OcUdAtdlJdKxoeYK {
+               grid-area: 11 / 7 / 12 / 14;
+               position: relative;
+            }
+
+            #RbS6MCRJuGXyYlc5 {
+               grid-area: 13 / 8 / 14 / 15;
+               position: relative;
+            }
+
+            #bcuaRQLXg0GFXbBx {
+               grid-area: 15 / 9 / 16 / 16;
+               position: relative;
+            }
+
+            #zQJ79Cq7t92S6Fkx {
+               grid-template-columns: 0 6.4rem 0 0 0 0 0 0 78.66666667rem 0 0 0 0 0 0 6.4rem;
+               grid-template-rows: 0 minmax(10.04207503rem, max-content) minmax(9.36659168rem, max-content) minmax(7.55300608rem, max-content) minmax(59rem, max-content) minmax(5.90369707rem, max-content) minmax(59rem, max-content) minmax(6.4rem, max-content) minmax(59rem, max-content) minmax(5.90369707rem, max-content) minmax(59rem, max-content) minmax(6.4rem, max-content) minmax(59rem, max-content) minmax(5.90369707rem, max-content) minmax(59rem, max-content) minmax(10.04207503rem, max-content);
+            }
+
+            #j35ec3ErVBXYru2B {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qfFewKN18O7OOZdh {
+               grid-template-columns: 4.26666667rem 91.46666667rem 4.26666667rem;
+               grid-template-rows: minmax(5.5312583rem, max-content) minmax(421.51483904rem, max-content) minmax(5.5312583rem, max-content);
+            }
+
+            #x84AVj5KJCTW0K8r {
+               min-height: calc(34.06039022 * var(--1vh, 1vh));
+            }
+
+            #fh5h9mSRcYwalfp3 {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #IIwImku6tS83O9TH {
+               grid-template-columns: 0 370.75694135%;
+               left: -135.37847068%;
+               grid-template-rows: 0 100%;
+            }
+
+            #xXn32X8Z38VDDqUT {
+               display: none;
+            }
+
+            #OgMc1ILSXuJW1KVp {
+               display: none;
+            }
+
+            #DEj9b7VVrAX1qJsZ {
+               display: none;
+            }
+
+            #Vm9yTPHf8uj6jrRj {
+               display: none;
+            }
+
+            #sEj946C7MV281MOF {
+               display: block;
+            }
+
+            #nQcICEnl6gScHtbB {
+               grid-area: 2 / 2 / 13 / 13;
+               position: relative;
+            }
+
+            #rvY7lIaz67aJOCGL {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(7.82221333em - var(--ffsd)));
+            }
+
+            #lyNOb9LEFZHKBr9U {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 7.82221333em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #lC4ntSPX6g5WwZRK {
+               min-width: 78.8rem;
+            }
+
+            #cnGZ3yKyjj07zCnO {
+               grid-area: 3 / 3 / 4 / 8;
+               position: relative;
+            }
+
+            #EqVTlJZfxK96u2zt {
+               grid-area: 5 / 4 / 6 / 9;
+               position: relative;
+            }
+
+            #jkBH6CFR9aSsfVP4 {
+               grid-area: 7 / 5 / 8 / 10;
+               position: relative;
+            }
+
+            #BOr6FFm4ZzM3pKgV {
+               grid-area: 9 / 6 / 10 / 11;
+               position: relative;
+            }
+
+            #aWx2qZaTN91HEt1l {
+               grid-area: 11 / 7 / 12 / 12;
+               position: relative;
+            }
+
+            #WYFQuzukeJwJKET0 {
+               grid-template-columns: 0 6.4rem 0 0 0 0 78.66666667rem 0 0 0 0 6.4rem;
+               grid-template-rows: 0 minmax(10.41233889rem, max-content) minmax(9.36659168rem, max-content) minmax(5.81105212rem, max-content) minmax(44.25rem, max-content) minmax(3.85276275rem, max-content) minmax(44.25rem, max-content) minmax(6.4rem, max-content) minmax(44.25rem, max-content) minmax(3.85276275rem, max-content) minmax(45.33177775rem, max-content) minmax(10.41233889rem, max-content);
+            }
+
+            #ogYZgDvwFqMKzEoY {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #FjZcAIQHjX87CsEE {
+               grid-template-columns: 4.26666667rem 91.46666667rem 4.26666667rem;
+               grid-template-rows: minmax(7.77185425rem, max-content) minmax(228.18962484rem, max-content) minmax(7.77185425rem, max-content);
+            }
+
+            #wrAGdabXJjfL7VB6 {
+               min-height: calc(19.19113965 * var(--1vh, 1vh));
+            }
+         }
+
+         @media (min-width: 375.05px) and (max-width: 480px) {
+            #e9gQFck7vgtSoD6q {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #u6a6l88EL1qAnNkB {
+               grid-template-columns: 0 653.197206%;
+               left: -276.598603%;
+               grid-template-rows: 0 100%;
+            }
+
+            #PKxfCpjYbI5eTzkf {
+               display: none;
+            }
+
+            #P5gUUDE8ocmHCP1j {
+               display: none;
+            }
+
+            #oHarnI9nFAiRIqcg {
+               display: none;
+            }
+
+            #Vch1mCPDoLott4Gz {
+               display: block;
+            }
+
+            #LJOPzbsghZxJ6Esc {
+               display: none;
+            }
+
+            #UuNi6aJ5GDV5SgVV {
+               grid-area: 2 / 2 / 9 / 9;
+               position: relative;
+            }
+
+            #k9rE8rYT4aWdxodk {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(17.85730446em - var(--ffsd)));
+            }
+
+            #qqSn8eCPJkoOXPrk {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 17.85730446em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #UhBWUqRmHEhPjMii {
+               min-width: 83.4375rem;
+            }
+
+            #H5Ph0rNjUS4jQLO3 {
+               grid-area: 3 / 3 / 4 / 6;
+               position: relative;
+            }
+
+            #vPPuxrYtVpTlCE2N {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(6.11110417em - var(--ffsd)));
+            }
+
+            #jfGIQ9rIDvXJVKql {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 6.11110417em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #vAOFjfVoYPpX1Axx {
+               min-width: 83.4375rem;
+            }
+
+            #mwwSXMcIrCvjIWKM {
+               grid-area: 5 / 4 / 6 / 7;
+               position: relative;
+            }
+
+            #Yxpjl69iOLU9Ie1B {
+               grid-area: 2 / 2 / 3 / 8;
+               position: relative;
+            }
+
+            #K4j9U3dJtI5aq9Y7 {
+               grid-area: 4 / 3 / 5 / 9;
+               position: relative;
+            }
+
+            #YhJnjSRlNIjJYaBp {
+               grid-area: 6 / 4 / 7 / 10;
+               position: relative;
+            }
+
+            #wHf3oti0vvRtTWuk {
+               grid-area: 8 / 5 / 9 / 11;
+               position: relative;
+            }
+
+            #Gi578jtSPtPhySy4 {
+               grid-area: 10 / 6 / 11 / 12;
+               position: relative;
+            }
+
+            #VEoLmMqFWom00Tia {
+               grid-area: 12 / 7 / 13 / 13;
+               position: relative;
+            }
+
+            #zJMF4IPJKJeZbspk {
+               grid-template-columns: 0.8563759rem 0 0 0 0 0 81.62058154rem 0 0 0 0 0 0.8563759rem;
+               grid-template-rows: 0 minmax(81.62058154rem, max-content) minmax(5rem, max-content) minmax(81.62058154rem, max-content) minmax(5rem, max-content) minmax(81.62058154rem, max-content) minmax(5.27275921rem, max-content) minmax(81.62058154rem, max-content) minmax(5rem, max-content) minmax(81.62058154rem, max-content) minmax(5rem, max-content) minmax(81.62058154rem, max-content);
+            }
+
+            #dYvu1gxRVggdW0iT {
+               grid-template-columns: 0 5rem 0 0 83.33333333rem 0 0 5rem;
+               grid-template-rows: 0 minmax(8.19583918rem, max-content) minmax(21.29083677rem, max-content) minmax(4.29883301rem, max-content) minmax(7.31764975rem, max-content) minmax(12.58021654rem, max-content) minmax(514.99624842rem, max-content) minmax(8.19583918rem, max-content);
+            }
+
+            #ywhbMvH9xTIYHxmE {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #yLdLr3ABo9gdozF5 {
+               grid-template-columns: 3.33333333rem 93.33333333rem 3.33333333rem;
+               grid-template-rows: minmax(3.97082749rem, max-content) minmax(576.87546284rem, max-content) minmax(3.97082749rem, max-content);
+            }
+
+            #y9CX1ernqNiN3GYC {
+               min-height: calc(48.46521239 * var(--1vh, 1vh));
+            }
+
+            #A6krwxCBK8bVUKNz {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qqObgxryCqCHUcPI {
+               grid-template-columns: 0 686.5575117%;
+               left: -293.27875585%;
+               grid-template-rows: 0 100%;
+            }
+
+            #BKuEeqT2Ucd44JRA {
+               display: none;
+            }
+
+            #P3l4HhIqt48V11js {
+               display: none;
+            }
+
+            #VXHXNNvj7bYupo50 {
+               display: none;
+            }
+
+            #qGTaJlQJQakK3LOS {
+               display: block;
+            }
+
+            #ENdn7MGBR6dVlygN {
+               display: none;
+            }
+
+            #SzlVJR82bq7Y2qca {
+               grid-area: 2 / 2 / 17 / 17;
+               position: relative;
+            }
+
+            #OwmRBr7wheM6oCP0 {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(6.11110417em - var(--ffsd)));
+            }
+
+            #HNcxWGqqNyOk7yXF {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 6.11110417em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #Ne8NHS5xRPsK1nhL {
+               min-width: 83.4375rem;
+            }
+
+            #Wcwy3sqpl1tY6dRv {
+               grid-area: 3 / 3 / 4 / 16;
+               position: relative;
+            }
+
+            #fLr9k3AcopHbkgqV {
+               grid-area: 5 / 4 / 6 / 10;
+               position: relative;
+            }
+
+            #lLo8RbGu0qTg7umz {
+               grid-area: 7 / 5 / 8 / 11;
+               position: relative;
+            }
+
+            #C5YQRCGNxC4ueOB5 {
+               grid-area: 9 / 6 / 10 / 12;
+               position: relative;
+            }
+
+            #OcUdAtdlJdKxoeYK {
+               grid-area: 11 / 7 / 12 / 13;
+               position: relative;
+            }
+
+            #RbS6MCRJuGXyYlc5 {
+               grid-area: 13 / 8 / 14 / 14;
+               position: relative;
+            }
+
+            #bcuaRQLXg0GFXbBx {
+               grid-area: 15 / 9 / 16 / 15;
+               position: relative;
+            }
+
+            #zQJ79Cq7t92S6Fkx {
+               grid-template-columns: 0 5rem 5.59871504rem 0 0 0 0 0 72.13590325rem 0 0 0 0 0 5.59871504rem 5rem;
+               grid-template-rows: 0 minmax(7.84537112rem, max-content) minmax(7.31764975rem, max-content) minmax(5.900786rem, max-content) minmax(54.10192744rem, max-content) minmax(4.61226334rem, max-content) minmax(54.10192744rem, max-content) minmax(5rem, max-content) minmax(54.10192744rem, max-content) minmax(4.61226334rem, max-content) minmax(54.10192744rem, max-content) minmax(5rem, max-content) minmax(54.10192744rem, max-content) minmax(4.61226334rem, max-content) minmax(54.10192744rem, max-content) minmax(7.84537112rem, max-content);
+            }
+
+            #j35ec3ErVBXYru2B {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qfFewKN18O7OOZdh {
+               grid-template-columns: 3.33333333rem 93.33333333rem 3.33333333rem;
+               grid-template-rows: minmax(4.32129555rem, max-content) minmax(377.35753262rem, max-content) minmax(4.32129555rem, max-content);
+            }
+
+            #x84AVj5KJCTW0K8r {
+               min-height: calc(31.98876607 * var(--1vh, 1vh));
+            }
+
+            #fh5h9mSRcYwalfp3 {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #IIwImku6tS83O9TH {
+               grid-template-columns: 0 358.77542834%;
+               left: -129.38771417%;
+               grid-template-rows: 0 100%;
+            }
+
+            #xXn32X8Z38VDDqUT {
+               display: none;
+            }
+
+            #OgMc1ILSXuJW1KVp {
+               display: none;
+            }
+
+            #DEj9b7VVrAX1qJsZ {
+               display: none;
+            }
+
+            #Vm9yTPHf8uj6jrRj {
+               display: block;
+            }
+
+            #sEj946C7MV281MOF {
+               display: none;
+            }
+
+            #nQcICEnl6gScHtbB {
+               grid-area: 2 / 2 / 13 / 13;
+               position: relative;
+            }
+
+            #rvY7lIaz67aJOCGL {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(6.11110417em - var(--ffsd)));
+            }
+
+            #lyNOb9LEFZHKBr9U {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 6.11110417em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #lC4ntSPX6g5WwZRK {
+               min-width: 83.4375rem;
+            }
+
+            #cnGZ3yKyjj07zCnO {
+               grid-area: 3 / 3 / 4 / 8;
+               position: relative;
+            }
+
+            #EqVTlJZfxK96u2zt {
+               grid-area: 5 / 4 / 6 / 9;
+               position: relative;
+            }
+
+            #jkBH6CFR9aSsfVP4 {
+               grid-area: 7 / 5 / 8 / 10;
+               position: relative;
+            }
+
+            #BOr6FFm4ZzM3pKgV {
+               grid-area: 9 / 6 / 10 / 11;
+               position: relative;
+            }
+
+            #aWx2qZaTN91HEt1l {
+               grid-area: 11 / 7 / 12 / 12;
+               position: relative;
+            }
+
+            #WYFQuzukeJwJKET0 {
+               grid-template-columns: 0 5rem 0 0 0 0 83.33333333rem 0 0 0 0 5rem;
+               grid-template-rows: 0 minmax(7.84537112rem, max-content) minmax(7.31764975rem, max-content) minmax(4.53988447rem, max-content) minmax(46.875rem, max-content) minmax(3.0099709rem, max-content) minmax(46.875rem, max-content) minmax(5rem, max-content) minmax(46.875rem, max-content) minmax(3.0099709rem, max-content) minmax(48.02095101rem, max-content) minmax(7.84537112rem, max-content);
+            }
+
+            #ogYZgDvwFqMKzEoY {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #FjZcAIQHjX87CsEE {
+               grid-template-columns: 3.33333333rem 93.33333333rem 3.33333333rem;
+               grid-template-rows: minmax(4.32129555rem, max-content) minmax(227.21416926rem, max-content) minmax(4.32129555rem, max-content);
+            }
+
+            #wrAGdabXJjfL7VB6 {
+               min-height: calc(19.54602154 * var(--1vh, 1vh));
+            }
+         }
+
+         @media (min-width: 480.05px) and (max-width: 768px) {
+            #e9gQFck7vgtSoD6q {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #u6a6l88EL1qAnNkB {
+               grid-template-columns: 0 416.39250287%;
+               left: -158.19625143%;
+               grid-template-rows: 0 100%;
+            }
+
+            #PKxfCpjYbI5eTzkf {
+               display: none;
+            }
+
+            #P5gUUDE8ocmHCP1j {
+               display: none;
+            }
+
+            #oHarnI9nFAiRIqcg {
+               display: block;
+            }
+
+            #Vch1mCPDoLott4Gz {
+               display: none;
+            }
+
+            #LJOPzbsghZxJ6Esc {
+               display: none;
+            }
+
+            #UuNi6aJ5GDV5SgVV {
+               grid-area: 2 / 2 / 9 / 9;
+               position: relative;
+            }
+
+            #k9rE8rYT4aWdxodk {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(11.16081529em - var(--ffsd)));
+            }
+
+            #qqSn8eCPJkoOXPrk {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 11.16081529em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #UhBWUqRmHEhPjMii {
+               min-width: 83.3984375rem;
+            }
+
+            #H5Ph0rNjUS4jQLO3 {
+               grid-area: 3 / 3 / 4 / 6;
+               position: relative;
+            }
+
+            #vPPuxrYtVpTlCE2N {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(3.8194401em - var(--ffsd)));
+            }
+
+            #jfGIQ9rIDvXJVKql {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 3.8194401em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #vAOFjfVoYPpX1Axx {
+               min-width: 83.3984375rem;
+            }
+
+            #mwwSXMcIrCvjIWKM {
+               grid-area: 5 / 4 / 6 / 7;
+               position: relative;
+            }
+
+            #Yxpjl69iOLU9Ie1B {
+               grid-area: 2 / 2 / 3 / 8;
+               position: relative;
+            }
+
+            #K4j9U3dJtI5aq9Y7 {
+               grid-area: 4 / 3 / 5 / 9;
+               position: relative;
+            }
+
+            #YhJnjSRlNIjJYaBp {
+               grid-area: 6 / 4 / 7 / 10;
+               position: relative;
+            }
+
+            #wHf3oti0vvRtTWuk {
+               grid-area: 8 / 5 / 9 / 11;
+               position: relative;
+            }
+
+            #Gi578jtSPtPhySy4 {
+               grid-area: 10 / 6 / 11 / 12;
+               position: relative;
+            }
+
+            #VEoLmMqFWom00Tia {
+               grid-area: 12 / 7 / 13 / 13;
+               position: relative;
+            }
+
+            #zJMF4IPJKJeZbspk {
+               grid-template-columns: 16.16023494rem 0 0 0 0 0 51.01286346rem 0 0 0 0 0 16.16023494rem;
+               grid-template-rows: 0 minmax(51.01286346rem, max-content) minmax(4.16666667rem, max-content) minmax(51.01286346rem, max-content) minmax(4.16666667rem, max-content) minmax(51.01286346rem, max-content) minmax(3.29547451rem, max-content) minmax(51.01286346rem, max-content) minmax(4.16666667rem, max-content) minmax(51.01286346rem, max-content) minmax(4.16666667rem, max-content) minmax(51.01286346rem, max-content);
+            }
+
+            #dYvu1gxRVggdW0iT {
+               grid-template-columns: 0 4.16666667rem 0 0 83.33333333rem 0 0 4.16666667rem;
+               grid-template-rows: 0 minmax(5.64323282rem, max-content) minmax(13.30677298rem, max-content) minmax(2.68677063rem, max-content) minmax(4.57353109rem, max-content) minmax(7.86263534rem, max-content) minmax(326.03932193rem, max-content) minmax(5.64323282rem, max-content);
+            }
+
+            #ywhbMvH9xTIYHxmE {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #yLdLr3ABo9gdozF5 {
+               grid-template-columns: 4.16666667rem 91.66666667rem 4.16666667rem;
+               grid-template-rows: minmax(3.52343385rem, max-content) minmax(365.75549761rem, max-content) minmax(3.52343385rem, max-content);
+            }
+
+            #y9CX1ernqNiN3GYC {
+               min-height: calc(45.09819365 * var(--1vh, 1vh));
+            }
+
+            #A6krwxCBK8bVUKNz {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qqObgxryCqCHUcPI {
+               grid-template-columns: 0 438.3622252%;
+               left: -169.1811126%;
+               grid-template-rows: 0 100%;
+            }
+
+            #BKuEeqT2Ucd44JRA {
+               display: none;
+            }
+
+            #P3l4HhIqt48V11js {
+               display: none;
+            }
+
+            #VXHXNNvj7bYupo50 {
+               display: block;
+            }
+
+            #qGTaJlQJQakK3LOS {
+               display: none;
+            }
+
+            #ENdn7MGBR6dVlygN {
+               display: none;
+            }
+
+            #SzlVJR82bq7Y2qca {
+               grid-area: 2 / 2 / 17 / 17;
+               position: relative;
+            }
+
+            #OwmRBr7wheM6oCP0 {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(3.8194401em - var(--ffsd)));
+            }
+
+            #HNcxWGqqNyOk7yXF {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 3.8194401em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #Ne8NHS5xRPsK1nhL {
+               min-width: 83.3984375rem;
+            }
+
+            #Wcwy3sqpl1tY6dRv {
+               grid-area: 3 / 3 / 4 / 16;
+               position: relative;
+            }
+
+            #fLr9k3AcopHbkgqV {
+               grid-area: 5 / 4 / 6 / 10;
+               position: relative;
+            }
+
+            #lLo8RbGu0qTg7umz {
+               grid-area: 7 / 5 / 8 / 11;
+               position: relative;
+            }
+
+            #C5YQRCGNxC4ueOB5 {
+               grid-area: 9 / 6 / 10 / 12;
+               position: relative;
+            }
+
+            #OcUdAtdlJdKxoeYK {
+               grid-area: 11 / 7 / 12 / 13;
+               position: relative;
+            }
+
+            #RbS6MCRJuGXyYlc5 {
+               grid-area: 13 / 8 / 14 / 14;
+               position: relative;
+            }
+
+            #bcuaRQLXg0GFXbBx {
+               grid-area: 15 / 9 / 16 / 15;
+               position: relative;
+            }
+
+            #zQJ79Cq7t92S6Fkx {
+               grid-template-columns: 0 4.16666667rem 19.1241969rem 0 0 0 0 0 45.08493953rem 0 0 0 0 0 19.1241969rem 4.16666667rem;
+               grid-template-rows: 0 minmax(5.42419028rem, max-content) minmax(4.57353109rem, max-content) minmax(3.68799125rem, max-content) minmax(33.81370465rem, max-content) minmax(2.88266459rem, max-content) minmax(33.81370465rem, max-content) minmax(4.16666667rem, max-content) minmax(33.81370465rem, max-content) minmax(2.88266459rem, max-content) minmax(33.81370465rem, max-content) minmax(4.16666667rem, max-content) minmax(33.81370465rem, max-content) minmax(2.88266459rem, max-content) minmax(33.81370465rem, max-content) minmax(5.42419028rem, max-content);
+            }
+
+            #j35ec3ErVBXYru2B {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qfFewKN18O7OOZdh {
+               grid-template-columns: 4.16666667rem 91.66666667rem 4.16666667rem;
+               grid-template-rows: minmax(3.74247638rem, max-content) minmax(238.97345788rem, max-content) minmax(3.74247638rem, max-content);
+            }
+
+            #x84AVj5KJCTW0K8r {
+               min-height: calc(29.81426666 * var(--1vh, 1vh));
+            }
+
+            #fh5h9mSRcYwalfp3 {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #IIwImku6tS83O9TH {
+               grid-template-columns: 0 315.46555567%;
+               left: -107.73277784%;
+               grid-template-rows: 0 100%;
+            }
+
+            #xXn32X8Z38VDDqUT {
+               display: none;
+            }
+
+            #OgMc1ILSXuJW1KVp {
+               display: none;
+            }
+
+            #DEj9b7VVrAX1qJsZ {
+               display: block;
+            }
+
+            #Vm9yTPHf8uj6jrRj {
+               display: none;
+            }
+
+            #sEj946C7MV281MOF {
+               display: none;
+            }
+
+            #nQcICEnl6gScHtbB {
+               grid-area: 2 / 2 / 13 / 13;
+               position: relative;
+            }
+
+            #rvY7lIaz67aJOCGL {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(3.8194401em - var(--ffsd)));
+            }
+
+            #lyNOb9LEFZHKBr9U {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 3.8194401em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #lC4ntSPX6g5WwZRK {
+               min-width: 83.3984375rem;
+            }
+
+            #cnGZ3yKyjj07zCnO {
+               grid-area: 3 / 3 / 4 / 12;
+               position: relative;
+            }
+
+            #EqVTlJZfxK96u2zt {
+               grid-area: 5 / 7 / 6 / 10;
+               position: relative;
+            }
+
+            #jkBH6CFR9aSsfVP4 {
+               grid-area: 7 / 4 / 8 / 11;
+               position: relative;
+            }
+
+            #BOr6FFm4ZzM3pKgV {
+               grid-area: 9 / 5 / 10 / 8;
+               position: relative;
+            }
+
+            #aWx2qZaTN91HEt1l {
+               grid-area: 11 / 6 / 12 / 9;
+               position: relative;
+            }
+
+            #WYFQuzukeJwJKET0 {
+               grid-template-columns: 0 4.16666667rem 2.59790813rem 0.93231979rem 0 0.93231979rem 75.34055769rem 0 0.93231979rem 0 2.59790813rem 4.16666667rem;
+               grid-template-rows: 0 minmax(5.42419028rem, max-content) minmax(4.57353109rem, max-content) minmax(2.8374278rem, max-content) minmax(42.90349359rem, max-content) minmax(1.88123181rem, max-content) minmax(43.95235335rem, max-content) minmax(4.16666667rem, max-content) minmax(42.90349359rem, max-content) minmax(1.88123181rem, max-content) minmax(43.95235335rem, max-content) minmax(5.42419028rem, max-content);
+            }
+
+            #ogYZgDvwFqMKzEoY {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #FjZcAIQHjX87CsEE {
+               grid-template-columns: 4.16666667rem 91.66666667rem 4.16666667rem;
+               grid-template-rows: minmax(3.74247638rem, max-content) minmax(199.90016363rem, max-content) minmax(3.74247638rem, max-content);
+            }
+
+            #wrAGdabXJjfL7VB6 {
+               min-height: calc(25.0875397 * var(--1vh, 1vh));
+            }
+         }
+
+         @media (min-width: 768.05px) and (max-width: 1024px) {
+            #e9gQFck7vgtSoD6q {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #u6a6l88EL1qAnNkB {
+               grid-template-columns: 0 312.29437715%;
+               left: -106.14718857%;
+               grid-template-rows: 0 100%;
+            }
+
+            #PKxfCpjYbI5eTzkf {
+               display: none;
+            }
+
+            #P5gUUDE8ocmHCP1j {
+               display: block;
+            }
+
+            #oHarnI9nFAiRIqcg {
+               display: none;
+            }
+
+            #Vch1mCPDoLott4Gz {
+               display: none;
+            }
+
+            #LJOPzbsghZxJ6Esc {
+               display: none;
+            }
+
+            #UuNi6aJ5GDV5SgVV {
+               grid-area: 2 / 2 / 9 / 9;
+               position: relative;
+            }
+
+            #k9rE8rYT4aWdxodk {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(8.37061147em - var(--ffsd)));
+            }
+
+            #qqSn8eCPJkoOXPrk {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 8.37061147em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #UhBWUqRmHEhPjMii {
+               min-width: 87.54882812rem;
+            }
+
+            #H5Ph0rNjUS4jQLO3 {
+               grid-area: 3 / 3 / 4 / 6;
+               position: relative;
+            }
+
+            #vPPuxrYtVpTlCE2N {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.86458008em - var(--ffsd)));
+            }
+
+            #jfGIQ9rIDvXJVKql {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.86458008em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #vAOFjfVoYPpX1Axx {
+               min-width: 87.54882812rem;
+            }
+
+            #mwwSXMcIrCvjIWKM {
+               grid-area: 5 / 4 / 6 / 7;
+               position: relative;
+            }
+
+            #Yxpjl69iOLU9Ie1B {
+               grid-area: 2 / 2 / 3 / 8;
+               position: relative;
+            }
+
+            #K4j9U3dJtI5aq9Y7 {
+               grid-area: 4 / 3 / 5 / 9;
+               position: relative;
+            }
+
+            #YhJnjSRlNIjJYaBp {
+               grid-area: 6 / 4 / 7 / 10;
+               position: relative;
+            }
+
+            #wHf3oti0vvRtTWuk {
+               grid-area: 8 / 5 / 9 / 11;
+               position: relative;
+            }
+
+            #Gi578jtSPtPhySy4 {
+               grid-area: 10 / 6 / 11 / 12;
+               position: relative;
+            }
+
+            #VEoLmMqFWom00Tia {
+               grid-area: 12 / 7 / 13 / 13;
+               position: relative;
+            }
+
+            #zJMF4IPJKJeZbspk {
+               grid-template-columns: 24.6201762rem 0 0 0 0 0 38.25964759rem 0 0 0 0 0 24.6201762rem;
+               grid-template-rows: 0 minmax(38.25964759rem, max-content) minmax(3.125rem, max-content) minmax(38.25964759rem, max-content) minmax(3.125rem, max-content) minmax(38.25964759rem, max-content) minmax(2.47160588rem, max-content) minmax(38.25964759rem, max-content) minmax(3.125rem, max-content) minmax(38.25964759rem, max-content) minmax(3.125rem, max-content) minmax(38.25964759rem, max-content);
+            }
+
+            #dYvu1gxRVggdW0iT {
+               grid-template-columns: 0 3.125rem 0 0 87.5rem 0 0 3.125rem;
+               grid-template-rows: 0 minmax(4.23242461rem, max-content) minmax(9.98007974rem, max-content) minmax(2.01507797rem, max-content) minmax(3.43014832rem, max-content) minmax(5.8969765rem, max-content) minmax(244.52949145rem, max-content) minmax(4.23242461rem, max-content);
+            }
+
+            #ywhbMvH9xTIYHxmE {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #yLdLr3ABo9gdozF5 {
+               grid-template-columns: 3.125rem 93.75rem 3.125rem;
+               grid-template-rows: minmax(2.64257539rem, max-content) minmax(274.31662321rem, max-content) minmax(2.64257539rem, max-content);
+            }
+
+            #y9CX1ernqNiN3GYC {
+               min-height: calc(45.09819365 * var(--1vh, 1vh));
+            }
+
+            #A6krwxCBK8bVUKNz {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qqObgxryCqCHUcPI {
+               grid-template-columns: 0 328.7716689%;
+               left: -114.38583445%;
+               grid-template-rows: 0 100%;
+            }
+
+            #BKuEeqT2Ucd44JRA {
+               display: none;
+            }
+
+            #P3l4HhIqt48V11js {
+               display: block;
+            }
+
+            #VXHXNNvj7bYupo50 {
+               display: none;
+            }
+
+            #qGTaJlQJQakK3LOS {
+               display: none;
+            }
+
+            #ENdn7MGBR6dVlygN {
+               display: none;
+            }
+
+            #SzlVJR82bq7Y2qca {
+               grid-area: 2 / 2 / 17 / 17;
+               position: relative;
+            }
+
+            #OwmRBr7wheM6oCP0 {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.86458008em - var(--ffsd)));
+            }
+
+            #HNcxWGqqNyOk7yXF {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.86458008em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #Ne8NHS5xRPsK1nhL {
+               min-width: 87.54882812rem;
+            }
+
+            #Wcwy3sqpl1tY6dRv {
+               grid-area: 3 / 3 / 4 / 16;
+               position: relative;
+            }
+
+            #fLr9k3AcopHbkgqV {
+               grid-area: 5 / 4 / 6 / 10;
+               position: relative;
+            }
+
+            #lLo8RbGu0qTg7umz {
+               grid-area: 7 / 5 / 8 / 11;
+               position: relative;
+            }
+
+            #C5YQRCGNxC4ueOB5 {
+               grid-area: 9 / 6 / 10 / 12;
+               position: relative;
+            }
+
+            #OcUdAtdlJdKxoeYK {
+               grid-area: 11 / 7 / 12 / 13;
+               position: relative;
+            }
+
+            #RbS6MCRJuGXyYlc5 {
+               grid-area: 13 / 8 / 14 / 14;
+               position: relative;
+            }
+
+            #bcuaRQLXg0GFXbBx {
+               grid-area: 15 / 9 / 16 / 15;
+               position: relative;
+            }
+
+            #zQJ79Cq7t92S6Fkx {
+               grid-template-columns: 0 3.125rem 26.84314768rem 0 0 0 0 0 33.81370465rem 0 0 0 0 0 26.84314768rem 3.125rem;
+               grid-template-rows: 0 minmax(4.06814271rem, max-content) minmax(3.43014832rem, max-content) minmax(2.76599344rem, max-content) minmax(25.36027849rem, max-content) minmax(2.16199844rem, max-content) minmax(25.36027849rem, max-content) minmax(3.125rem, max-content) minmax(25.36027849rem, max-content) minmax(2.16199844rem, max-content) minmax(25.36027849rem, max-content) minmax(3.125rem, max-content) minmax(25.36027849rem, max-content) minmax(2.16199844rem, max-content) minmax(25.36027849rem, max-content) minmax(4.06814271rem, max-content);
+            }
+
+            #j35ec3ErVBXYru2B {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qfFewKN18O7OOZdh {
+               grid-template-columns: 3.125rem 93.75rem 3.125rem;
+               grid-template-rows: minmax(2.80685729rem, max-content) minmax(179.23009341rem, max-content) minmax(2.80685729rem, max-content);
+            }
+
+            #x84AVj5KJCTW0K8r {
+               min-height: calc(29.81426666 * var(--1vh, 1vh));
+            }
+
+            #fh5h9mSRcYwalfp3 {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #IIwImku6tS83O9TH {
+               grid-template-columns: 0 236.59916676%;
+               left: -68.29958338%;
+               grid-template-rows: 0 100%;
+            }
+
+            #xXn32X8Z38VDDqUT {
+               display: none;
+            }
+
+            #OgMc1ILSXuJW1KVp {
+               display: block;
+            }
+
+            #DEj9b7VVrAX1qJsZ {
+               display: none;
+            }
+
+            #Vm9yTPHf8uj6jrRj {
+               display: none;
+            }
+
+            #sEj946C7MV281MOF {
+               display: none;
+            }
+
+            #nQcICEnl6gScHtbB {
+               grid-area: 2 / 2 / 13 / 13;
+               position: relative;
+            }
+
+            #rvY7lIaz67aJOCGL {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.86458008em - var(--ffsd)));
+            }
+
+            #lyNOb9LEFZHKBr9U {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.86458008em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #lC4ntSPX6g5WwZRK {
+               min-width: 87.54882812rem;
+            }
+
+            #cnGZ3yKyjj07zCnO {
+               grid-area: 3 / 3 / 4 / 12;
+               position: relative;
+            }
+
+            #EqVTlJZfxK96u2zt {
+               grid-area: 5 / 7 / 6 / 10;
+               position: relative;
+            }
+
+            #jkBH6CFR9aSsfVP4 {
+               grid-area: 7 / 4 / 8 / 11;
+               position: relative;
+            }
+
+            #BOr6FFm4ZzM3pKgV {
+               grid-area: 9 / 5 / 10 / 8;
+               position: relative;
+            }
+
+            #aWx2qZaTN91HEt1l {
+               grid-area: 11 / 6 / 12 / 9;
+               position: relative;
+            }
+
+            #WYFQuzukeJwJKET0 {
+               grid-template-columns: 0 3.125rem 14.4484311rem 0.69923985rem 0 0.69923985rem 56.50541827rem 0 0.69923985rem 0 14.4484311rem 3.125rem;
+               grid-template-rows: 0 minmax(4.06814271rem, max-content) minmax(3.43014832rem, max-content) minmax(2.12807085rem, max-content) minmax(32.17762019rem, max-content) minmax(1.41092386rem, max-content) minmax(32.96426502rem, max-content) minmax(3.125rem, max-content) minmax(32.17762019rem, max-content) minmax(1.41092386rem, max-content) minmax(32.96426502rem, max-content) minmax(4.06814271rem, max-content);
+            }
+
+            #ogYZgDvwFqMKzEoY {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #FjZcAIQHjX87CsEE {
+               grid-template-columns: 3.125rem 93.75rem 3.125rem;
+               grid-template-rows: minmax(2.80685729rem, max-content) minmax(149.92512272rem, max-content) minmax(2.80685729rem, max-content);
+            }
+
+            #wrAGdabXJjfL7VB6 {
+               min-height: calc(25.0875397 * var(--1vh, 1vh));
+            }
+         }
+
+         @media (min-width: 1024.05px) {
+            #e9gQFck7vgtSoD6q {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #u6a6l88EL1qAnNkB {
+               grid-template-columns: 0 100%;
+               grid-template-rows: 0 100%;
+            }
+
+            #PKxfCpjYbI5eTzkf {
+               display: block;
+            }
+
+            #P5gUUDE8ocmHCP1j {
+               display: none;
+            }
+
+            #oHarnI9nFAiRIqcg {
+               display: none;
+            }
+
+            #Vch1mCPDoLott4Gz {
+               display: none;
+            }
+
+            #LJOPzbsghZxJ6Esc {
+               display: none;
+            }
+
+            #UuNi6aJ5GDV5SgVV {
+               grid-area: 2 / 2 / 9 / 9;
+               position: relative;
+            }
+
+            #k9rE8rYT4aWdxodk {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(6.27489469em - var(--ffsd)));
+            }
+
+            #qqSn8eCPJkoOXPrk {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 6.27489469em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #UhBWUqRmHEhPjMii {
+               min-width: 13.65728634rem;
+            }
+
+            #H5Ph0rNjUS4jQLO3 {
+               grid-area: 3 / 3 / 4 / 6;
+               position: relative;
+            }
+
+            #vPPuxrYtVpTlCE2N {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.14738653em - var(--ffsd)));
+            }
+
+            #jfGIQ9rIDvXJVKql {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.14738653em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #vAOFjfVoYPpX1Axx {
+               min-width: 19.14916367rem;
+            }
+
+            #mwwSXMcIrCvjIWKM {
+               grid-area: 5 / 4 / 6 / 7;
+               position: relative;
+            }
+
+            #Yxpjl69iOLU9Ie1B {
+               grid-area: 2 / 2 / 5 / 4;
+               position: relative;
+            }
+
+            #K4j9U3dJtI5aq9Y7 {
+               grid-area: 3 / 6 / 6 / 8;
+               position: relative;
+            }
+
+            #YhJnjSRlNIjJYaBp {
+               grid-area: 4 / 10 / 7 / 12;
+               position: relative;
+            }
+
+            #wHf3oti0vvRtTWuk {
+               grid-area: 8 / 3 / 11 / 5;
+               position: relative;
+            }
+
+            #Gi578jtSPtPhySy4 {
+               grid-area: 9 / 7 / 12 / 9;
+               position: relative;
+            }
+
+            #VEoLmMqFWom00Tia {
+               grid-area: 10 / 11 / 13 / 13;
+               position: relative;
+            }
+
+            #zJMF4IPJKJeZbspk {
+               grid-template-columns: 0 0 28.68073143rem 0 1.16262668rem 0 28.68073143rem 0 1.14697126rem 0 28.68073143rem 0;
+               grid-template-rows: 0 0 0 minmax(28.68073143rem, max-content) 0 0 minmax(1.85279972rem, max-content) 0 0 minmax(28.68073143rem, max-content) 0 0;
+            }
+
+            #dYvu1gxRVggdW0iT {
+               grid-template-columns: 0 3.67182864rem 0 0.20184913rem 13.418834rem 5.49187732rem 69.44108091rem 3.87367777rem;
+               grid-template-rows: 0 minmax(4.00293237rem, max-content) minmax(7.48140677rem, max-content) minmax(1.5105709rem, max-content) minmax(2.57135569rem, max-content) minmax(4.42057389rem, max-content) minmax(59.21426259rem, max-content) minmax(6.87144509rem, max-content);
+            }
+
+            #ywhbMvH9xTIYHxmE {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #yLdLr3ABo9gdozF5 {
+               grid-template-columns: 1.95042612rem 96.09914777rem 1.95042612rem;
+               grid-template-rows: minmax(1.61932239rem, max-content) minmax(86.07254729rem, max-content) minmax(1.83960908rem, max-content);
+            }
+
+            #y9CX1ernqNiN3GYC {
+               min-height: calc(42.33298719 * var(--1vh, 1vh));
+            }
+
+            #A6krwxCBK8bVUKNz {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qqObgxryCqCHUcPI {
+               grid-template-columns: 0 100%;
+               grid-template-rows: 0 100%;
+            }
+
+            #BKuEeqT2Ucd44JRA {
+               display: block;
+            }
+
+            #P3l4HhIqt48V11js {
+               display: none;
+            }
+
+            #VXHXNNvj7bYupo50 {
+               display: none;
+            }
+
+            #qGTaJlQJQakK3LOS {
+               display: none;
+            }
+
+            #ENdn7MGBR6dVlygN {
+               display: none;
+            }
+
+            #SzlVJR82bq7Y2qca {
+               grid-area: 2 / 2 / 17 / 17;
+               position: relative;
+            }
+
+            #OwmRBr7wheM6oCP0 {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.14738653em - var(--ffsd)));
+            }
+
+            #HNcxWGqqNyOk7yXF {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.14738653em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #Ne8NHS5xRPsK1nhL {
+               min-width: 9.44378854rem;
+            }
+
+            #Wcwy3sqpl1tY6dRv {
+               grid-area: 3 / 3 / 4 / 6;
+               position: relative;
+            }
+
+            #fLr9k3AcopHbkgqV {
+               grid-area: 5 / 4 / 8 / 7;
+               position: relative;
+            }
+
+            #lLo8RbGu0qTg7umz {
+               grid-area: 11 / 5 / 14 / 8;
+               position: relative;
+            }
+
+            #C5YQRCGNxC4ueOB5 {
+               grid-area: 6 / 9 / 9 / 11;
+               position: relative;
+            }
+
+            #OcUdAtdlJdKxoeYK {
+               grid-area: 12 / 10 / 15 / 12;
+               position: relative;
+            }
+
+            #RbS6MCRJuGXyYlc5 {
+               grid-area: 7 / 13 / 10 / 15;
+               position: relative;
+            }
+
+            #bcuaRQLXg0GFXbBx {
+               grid-area: 13 / 14 / 16 / 16;
+               position: relative;
+            }
+
+            #zQJ79Cq7t92S6Fkx {
+               grid-template-columns: 0 8.2701128rem 0.05490919rem 0 9.35227613rem 15.99562545rem 0 1.43922444rem 0 25.34790158rem 0 1.45736779rem 0 25.34790158rem 0 8.32502199rem;
+               grid-template-rows: 0 minmax(3.75662978rem, max-content) minmax(2.57135569rem, max-content) minmax(2.07348264rem, max-content) 0 0 minmax(19.01092619rem, max-content) 0 0 minmax(1.62070747rem, max-content) 0 0 minmax(19.01092619rem, max-content) 0 0 minmax(4.44726967rem, max-content);
+            }
+
+            #j35ec3ErVBXYru2B {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #qfFewKN18O7OOZdh {
+               grid-template-columns: 2.20482952rem 95.59034095rem 2.20482952rem;
+               grid-template-rows: minmax(1.86562498rem, max-content) minmax(52.49129762rem, max-content) minmax(1.86562498rem, max-content);
+            }
+
+            #x84AVj5KJCTW0K8r {
+               min-height: calc(26.58359294 * var(--1vh, 1vh));
+            }
+
+            #fh5h9mSRcYwalfp3 {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #IIwImku6tS83O9TH {
+               grid-template-columns: 0 100%;
+               grid-template-rows: 0 100%;
+            }
+
+            #xXn32X8Z38VDDqUT {
+               display: block;
+            }
+
+            #OgMc1ILSXuJW1KVp {
+               display: none;
+            }
+
+            #DEj9b7VVrAX1qJsZ {
+               display: none;
+            }
+
+            #Vm9yTPHf8uj6jrRj {
+               display: none;
+            }
+
+            #sEj946C7MV281MOF {
+               display: none;
+            }
+
+            #nQcICEnl6gScHtbB {
+               grid-area: 2 / 2 / 13 / 13;
+               position: relative;
+            }
+
+            #rvY7lIaz67aJOCGL {
+               font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), calc(2.14738653em - var(--ffsd)));
+            }
+
+            #lyNOb9LEFZHKBr9U {
+               --first-font-size: max(calc(12px * var(--rfso, var(--bfso, 1))), 2.14738653em);
+               --last-font-size: var(--first-font-size);
+               margin-top: calc(var(--first-font-size) * -0.1);
+               margin-bottom: calc(var(--last-font-size) * -0.1);
+            }
+
+            #lC4ntSPX6g5WwZRK {
+               min-width: 11.68021318rem;
+            }
+
+            #cnGZ3yKyjj07zCnO {
+               grid-area: 3 / 3 / 4 / 6;
+               position: relative;
+            }
+
+            #EqVTlJZfxK96u2zt {
+               grid-area: 5 / 5 / 7 / 7;
+               position: relative;
+            }
+
+            #jkBH6CFR9aSsfVP4 {
+               grid-area: 9 / 4 / 11 / 8;
+               position: relative;
+            }
+
+            #BOr6FFm4ZzM3pKgV {
+               grid-area: 6 / 9 / 8 / 11;
+               position: relative;
+            }
+
+            #aWx2qZaTN91HEt1l {
+               grid-area: 10 / 10 / 12 / 12;
+               position: relative;
+            }
+
+            #WYFQuzukeJwJKET0 {
+               grid-template-columns: 0 3.41742523rem 0 1.04834788rem 10.59526208rem 32.28729276rem 0 1.63858133rem 0 42.88255484rem 0 3.72087683rem;
+               grid-template-rows: 0 minmax(3.75662978rem, max-content) minmax(2.57135569rem, max-content) minmax(1.59527419rem, max-content) 0 minmax(24.1214371rem, max-content) 0 minmax(1.05767645rem, max-content) 0 minmax(24.71113278rem, max-content) 0 minmax(3.07310405rem, max-content);
+            }
+
+            #ogYZgDvwFqMKzEoY {
+               grid-area: 2 / 2 / 3 / 3;
+               position: relative;
+            }
+
+            #FjZcAIQHjX87CsEE {
+               grid-template-columns: 2.20482952rem 95.59034095rem 2.20482952rem;
+               grid-template-rows: minmax(1.86562498rem, max-content) minmax(60.88661004rem, max-content) minmax(2.98715005rem, max-content);
+            }
+
+            #wrAGdabXJjfL7VB6 {
+               min-height: calc(31.08341987 * var(--1vh, 1vh));
+            }
+         }
+
+         @keyframes pulse {
+            0% {
+               background-color: rgba(226, 226, 226, 0.05);
+            }
+
+            50% {
+               background-color: rgba(226, 226, 226, 0.1);
+            }
+
+            100% {
+               background-color: rgba(226, 226, 226, 0.05);
+            }
+         }
+      </style>
+      <noscript>
+         <style>
+            @keyframes pulse {}
+
+            .animated {
+               animation-play-state: running !important;
+            }
+         </style>
+      </noscript>
+   </head>
+   <body>
+      <div id="root">
+         <a id="page-1" aria-hidden="true" style="visibility:hidden;"></a>
+         <section id="y9CX1ernqNiN3GYC" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;">
+            <div id="u6a6l88EL1qAnNkB" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+               <div id="e9gQFck7vgtSoD6q" style="z-index:0;">
+                  <div id="mGD3HTMesavSHYyE" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                     <div id="ugFb5y97uXNCesKw" style="width:100%;height:100%;opacity:1.0;">
+                        <div id="W4Xq2LbrJrLpJASo" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                           <svg id="sxh274g2dFBiaPf2" viewBox="0 0 1366.0 1223.0" preserveAspectRatio="none" style="background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <defs>
+                                 <lineargradient id="yFa4c8x2ctLpIe5I" gradientUnits="userSpaceOnUse" x1="0" y1="611.5" x2="1366" y2="611.5">
+                                    <stop offset="0%" stop-color="#202020" stop-opacity="1"></stop>
+                                    <stop offset="100%" stop-color="#2b2b2b" stop-opacity="1"></stop>
+                                 </lineargradient>
+                              </defs>
+                              <rect id="ofJDbWOpzbHQY3AU" width="1366" height="1223" style="fill:url(#yFa4c8x2ctLpIe5I);"></rect>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="yLdLr3ABo9gdozF5" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
+               <div id="ywhbMvH9xTIYHxmE">
+                  <div id="dYvu1gxRVggdW0iT" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
+                     <div id="UuNi6aJ5GDV5SgVV" style="z-index:1;">
+                        <div id="XZ34B6Q0zdxkN6Ed" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                           <svg id="PKxfCpjYbI5eTzkf" viewBox="0 0 364.6429 326.5975" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="egLLEsdxNr310yVv" style="transform:scale(1, 1);">
+                                 <path id="gZoBDAb3E2XYWfOE" d="M0,0 L364.64287735,0 L364.64287735,326.5974989 L0,326.5974989 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="P5gUUDE8ocmHCP1j" viewBox="0 0 266.6667 780.2784" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="GCQKorHOZ0X7UUXi" style="transform:scale(1, 1);">
+                                 <path id="twck3UXHg74KEI6b" d="M0,0 L266.66666667,0 L266.66666667,780.2783949 L0,780.2783949 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="oHarnI9nFAiRIqcg" viewBox="0 0 195.5556 780.2784" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="i52imVjC1aC9mG9h" style="transform:scale(1, 1);">
+                                 <path id="kN4xVSFTCHI4zmAQ" d="M0,0 L195.55555556,0 L195.55555556,780.2783949 L0,780.2783949 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="Vch1mCPDoLott4Gz" viewBox="0 0 124.4444 769.1673" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="t0hvpf7k4eE5GZNb" style="transform:scale(1, 1);">
+                                 <path id="xnqcJ01szVEhK6Yr" d="M0,0 L124.44444444,0 L124.44444444,769.16728379 L0,769.16728379 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="LJOPzbsghZxJ6Esc" viewBox="0 0 95.2778 607.8693" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="DIbckVEeAmr2nbaB" style="transform:scale(1, 1);">
+                                 <path id="EJqF25JNdoZmmVzY" d="M0,0 L95.27777778,0 L95.27777778,607.86929818 L0,607.86929818 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                        </div>
+                     </div>
+                     <div id="H5Ph0rNjUS4jQLO3" style="z-index:9;">
+                        <div id="UhBWUqRmHEhPjMii" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                           <div id="qqSn8eCPJkoOXPrk" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
+                              <p id="k9rE8rYT4aWdxodk" style="color:#ffffff;font-family:YAEEKJVWzzw-0;line-height:1.39998733em;text-align:center;text-transform:none;letter-spacing:0em;">
+                                 <span id="kZvk14Oso54JZX1i" style="color:#ffffff;">Design</span>
+                                 <br>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="mwwSXMcIrCvjIWKM" style="z-index:10;">
+                        <div id="vAOFjfVoYPpX1Axx" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                           <div id="jfGIQ9rIDvXJVKql" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
+                              <p id="vPPuxrYtVpTlCE2N" style="color:#ffffff;font-family:YAFdJt8dAY0-0;line-height:1.39772886em;text-align:center;">
+                                 <span id="DhJdFuj04ZH9ElMU" style="color:#ffffff;">Posts de instagram</span>
+                                 <br>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="zJMF4IPJKJeZbspk" style="display:grid;position:relative;grid-area:7 / 5 / 8 / 8;">
+                        <div id="Yxpjl69iOLU9Ie1B" style="z-index:3;">
+                           <div id="yTfR5qwxkKrHksI2" style="padding-top:100%;transform:rotate(0deg);">
+                              <div id="ewsHkXSMSuv7lSCO" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                 <div id="Ud4zopsq9sEZs6S2" style="width:100%;height:100%;opacity:1.0;">
+                                    <div id="EzLEeAzUGwMdL6N3" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                       <div id="lDIRw9Hv2FaJjMvs" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                          <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\lasanha.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="K4j9U3dJtI5aq9Y7" style="z-index:4;">
+                           <div id="XRwawJdEOC1mplef" style="padding-top:100%;transform:rotate(0deg);">
+                              <div id="CjyIbixPHz1iv26P" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                 <div id="J1SXP7rlREPvzlTn" style="width:100%;height:100%;opacity:1.0;">
+                                    <div id="nMSXYfqdybMPEeAm" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                       <div id="MLNa2nJ2yLEdTN9B" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                          <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\controle.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="YhJnjSRlNIjJYaBp" style="z-index:5;">
+                           <div id="REfYhkoeTZzUu9aA" style="padding-top:100%;transform:rotate(0deg);">
+                              <div id="BgfvqH9Hxg1817GS" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                 <div id="cnjfTNQTVj61zQnH" style="width:100%;height:100%;opacity:1.0;">
+                                    <div id="eTBAyQOo2vlp12AW" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                       <div id="XKTeJmGbgTY1NtHn" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                          <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\oculos.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="wHf3oti0vvRtTWuk" style="z-index:6;">
+                           <div id="W640iTO7kcj00zU7" style="padding-top:100%;transform:rotate(0deg);">
+                              <div id="n8d5qYlQWJnH44gx" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                 <div id="zq9welDVxRsrX6L3" style="width:100%;height:100%;opacity:1.0;">
+                                    <div id="hnf7mVUQXEuZ2rGI" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                       <div id="ebSP1wp1NpbDv7Eh" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                          <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\tenis.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="Gi578jtSPtPhySy4" style="z-index:7;">
+                           <div id="qh1NJ6siBdxrlxgL" style="padding-top:100%;transform:rotate(0deg);">
+                              <div id="hlZMgmxmL8p4coDc" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                 <div id="Qkxg0llCfUmDtiLH" style="width:100%;height:100%;opacity:1.0;">
+                                    <div id="jSp5kzdSYab7wbqb" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                       <div id="klR5xLP0Xhnkwa2Q" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                          <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\projeto.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="VEoLmMqFWom00Tia" style="z-index:8;">
+                           <div id="g4bitf95WWFJj9oT" style="padding-top:100%;transform:rotate(0deg);">
+                              <div id="uRbLf60AuP7zji8O" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                                 <div id="mk3BIOlNvkCoeGCu" style="width:100%;height:100%;opacity:1.0;">
+                                    <div id="UoIavp6R9HSzbijU" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                       <div id="xsOBdAjAG90iZonu" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                          <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\mapa.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <a id="page-2" aria-hidden="true" style="visibility:hidden;"></a>
+         <section id="x84AVj5KJCTW0K8r" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
+            <div id="qqObgxryCqCHUcPI" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+               <div id="A6krwxCBK8bVUKNz" style="z-index:0;">
+                  <div id="A6X1MozMX6jo5ere" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                     <div id="X6pUCIJKQnYoCLMj" style="width:100%;height:100%;opacity:1.0;">
+                        <div id="dByhv6jd0Y1Qc2u8" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                           <svg id="yz6wB9Fnv4JJJvVW" viewBox="0 0 1366.0 768.0" preserveAspectRatio="none" style="background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <defs>
+                                 <lineargradient id="BNQpuLAF8KmCnkZq" gradientUnits="userSpaceOnUse" x1="0" y1="384" x2="1366" y2="384">
+                                    <stop offset="0%" stop-color="#202020" stop-opacity="1"></stop>
+                                    <stop offset="100%" stop-color="#2b2b2b" stop-opacity="1"></stop>
+                                 </lineargradient>
+                              </defs>
+                              <rect id="OPssTKtrSjRVx4dH" width="1366" height="768" style="fill:url(#BNQpuLAF8KmCnkZq);"></rect>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="qfFewKN18O7OOZdh" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
+               <div id="j35ec3ErVBXYru2B">
+                  <div id="zQJ79Cq7t92S6Fkx" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
+                     <div id="SzlVJR82bq7Y2qca" style="z-index:1;">
+                        <div id="P6rlNGZL0hUWYenM" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                           <svg id="BKuEeqT2Ucd44JRA" viewBox="0 0 362.7122 199.1753" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="lD2uObLij4p6rkrG" style="transform:scale(1, 1);">
+                                 <path id="XDboAYV9uikoutun" d="M0,0 L362.71223817,0 L362.71223817,199.17531264 L0,199.17531264 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="P3l4HhIqt48V11js" viewBox="0 0 266.6667 509.81" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="HtyYXkSWRPmOzSgu" style="transform:scale(1, 1);">
+                                 <path id="wduKNrQ1WQAsj2NP" d="M0,0 L266.66666667,0 L266.66666667,509.81004349 L0,509.81004349 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="VXHXNNvj7bYupo50" viewBox="0 0 195.5556 509.81" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="YEV6ukWgMZiwRDTA" style="transform:scale(1, 1);">
+                                 <path id="lXrw4ObRl3uUAueE" d="M0,0 L195.55555556,0 L195.55555556,509.81004349 L0,509.81004349 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="qGTaJlQJQakK3LOS" viewBox="0 0 124.4444 503.1434" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="tQOiRfTl1oWy07Tl" style="transform:scale(1, 1);">
+                                 <path id="Ago5UjPWuqGJ1Fz4" d="M0,0 L124.44444444,0 L124.44444444,503.14337682 L0,503.14337682 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="ENdn7MGBR6dVlygN" viewBox="0 0 95.2778 439.078" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="aJqlAbuE3Ily23n2" style="transform:scale(1, 1);">
+                                 <path id="ECXNrPRlOSsCSv4e" d="M0,0 L95.27777778,0 L95.27777778,439.07795734 L0,439.07795734 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                        </div>
+                     </div>
+                     <div id="Wcwy3sqpl1tY6dRv" style="z-index:8;">
+                        <div id="Ne8NHS5xRPsK1nhL" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                           <div id="HNcxWGqqNyOk7yXF" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
+                              <p id="OwmRBr7wheM6oCP0" style="color:#ffffff;font-family:YAFdJt8dAY0-0;line-height:1.39772886em;text-align:center;">
+                                 <span id="K9Df3O38lnRz75ZN" style="color:#ffffff;">Mockup’s</span>
+                                 <br>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="fLr9k3AcopHbkgqV" style="z-index:2;">
+                        <div id="DC6kq8kCYNJsYczZ" style="padding-top:75%;transform:rotate(0deg);">
+                           <div id="mRLkEJwKU8RRiIeW" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="QSF9nzzZGFGYrrUc" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="J7gj70LeCuOyMsuY" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="PSwzoQKU2ECgMUMs" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\painel.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="lLo8RbGu0qTg7umz" style="z-index:5;">
+                        <div id="OpPxSqjIJBucDQoY" style="padding-top:75%;transform:rotate(0deg);">
+                           <div id="LusIy8sFrgC3vpi2" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="qkIpBRwyofhj2QuI" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="G9DtZDhnRFvJ5PPf" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="dFyZ3FK4krff3gBS" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\van.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="C5YQRCGNxC4ueOB5" style="z-index:3;">
+                        <div id="IMN3GBksxBaotFM7" style="padding-top:75%;transform:rotate(0deg);">
+                           <div id="iCFOZjW0exqcYnOr" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="gwhT8MgKwBMA7ZFT" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="uk1up1RWjpu48QiM" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="G88KQsSWHxT8lWyA" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\livro.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="OcUdAtdlJdKxoeYK" style="z-index:6;">
+                        <div id="RLIDfSdv2SrzXXjI" style="padding-top:75%;transform:rotate(0deg);">
+                           <div id="L2vUMXFdfdgOU2Wt" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="ixpyeQurD7UMQen9" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="urRsRRuSjG8By2yp" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="HK8ZkgUvCMWhNBuE" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\almofada.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="RbS6MCRJuGXyYlc5" style="z-index:4;">
+                        <div id="HtqjsioTLoBzsdkL" style="padding-top:75%;transform:rotate(0deg);">
+                           <div id="SudTcusyTXKdjmGR" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="xlfHoFH420dNw9YT" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="mBnH7GeYMRfdmTn2" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="EJxNWAMM0ZSW994q" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\cartao.jpg" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="bcuaRQLXg0GFXbBx" style="z-index:7;">
+                        <div id="BYpVyc6pj7qUtSeT" style="padding-top:75%;transform:rotate(0deg);">
+                           <div id="KNjmerL3WEZWBSCl" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="AMdHXOzQ4YtR15YQ" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="dX1HboZ5h7zGnirM" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="OVxM7UzNPZiw3mSA" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\caixa.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <a id="page-3" aria-hidden="true" style="visibility:hidden;"></a>
+         <section id="wrAGdabXJjfL7VB6" style="position:relative;overflow:hidden;display:grid;align-items:center;grid-template-columns:auto 100rem auto;z-index:0;margin-top:-1px;">
+            <div id="IIwImku6tS83O9TH" style="grid-area:1 / 1 / 2 / 4;display:grid;position:absolute;min-height:100%;min-width:100%;">
+               <div id="fh5h9mSRcYwalfp3" style="z-index:0;">
+                  <div id="kkXiB6o3KqJSfAd0" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                     <div id="m4ponv2z3EWmzZZD" style="width:100%;height:100%;opacity:1.0;">
+                        <div id="pPPlf24miektQn9d" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                           <svg id="bZz5hsT3cBdYFClT" viewBox="0 0 1366.0 898.0" preserveAspectRatio="none" style="background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <defs>
+                                 <lineargradient id="Xhy81XDeG2gFu4eV" gradientUnits="userSpaceOnUse" x1="0" y1="449" x2="1366" y2="449">
+                                    <stop offset="0%" stop-color="#202020" stop-opacity="1"></stop>
+                                    <stop offset="100%" stop-color="#2b2b2b" stop-opacity="1"></stop>
+                                 </lineargradient>
+                              </defs>
+                              <rect id="l3O7MXXBOvTyVCZy" width="1366" height="898" style="fill:url(#Xhy81XDeG2gFu4eV);"></rect>
+                           </svg>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="FjZcAIQHjX87CsEE" style="display:grid;position:relative;grid-area:1 / 2 / 2 / 3;">
+               <div id="ogYZgDvwFqMKzEoY">
+                  <div id="WYFQuzukeJwJKET0" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
+                     <div id="nQcICEnl6gScHtbB" style="z-index:1;">
+                        <div id="chO8B1JdpAewaESP" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                           <svg id="xXn32X8Z38VDDqUT" viewBox="0 0 362.7122 231.0309" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="AOuBZxL8qdjfKKYS" style="transform:scale(1, 1);">
+                                 <path id="iUGFrsyUBfBIa4vp" d="M0,0 L362.71223817,0 L362.71223817,231.0308592 L0,231.0308592 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="OgMc1ILSXuJW1KVp" viewBox="0 0 266.6667 426.4537" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="rlwVHbgjO7fAKLuR" style="transform:scale(1, 1);">
+                                 <path id="GX941gtyUcS0bpSY" d="M0,0 L266.66666667,0 L266.66666667,426.45368241 L0,426.45368241 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="DEj9b7VVrAX1qJsZ" viewBox="0 0 195.5556 426.4537" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="rF5aHJ7Ok0A9cOwz" style="transform:scale(1, 1);">
+                                 <path id="RfPEHKOqpfky1PAT" d="M0,0 L195.55555556,0 L195.55555556,426.45368241 L0,426.45368241 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="Vm9yTPHf8uj6jrRj" viewBox="0 0 124.4444 302.9522" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="TLoyvYZldMvzoq7s" style="transform:scale(1, 1);">
+                                 <path id="HSmPY6GnLtOSvwQs" d="M0,0 L124.44444444,0 L124.44444444,302.95222568 L0,302.95222568 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                           <svg id="sEj946C7MV281MOF" viewBox="0 0 95.2778 237.6975" preserveAspectRatio="none" style="width:100%;height:100%;opacity:1.0;overflow:hidden;position:absolute;top:0%;left:0%;background:url(&#x27;data:image/png;base64,&#x27;);">
+                              <g id="h2rJAEmRNA28KKd3" style="transform:scale(1, 1);">
+                                 <path id="jpLsbI5Eeu2BvKwM" d="M0,0 L95.27777778,0 L95.27777778,237.69752587 L0,237.69752587 Z" style="fill:#0f0f0f;opacity:1.0;"></path>
+                              </g>
+                           </svg>
+                        </div>
+                     </div>
+                     <div id="cnGZ3yKyjj07zCnO" style="z-index:6;">
+                        <div id="lC4ntSPX6g5WwZRK" style="box-sizing:border-box;width:100%;height:100%;transform:rotate(0deg);">
+                           <div id="lyNOb9LEFZHKBr9U" style="opacity:1.0;display:flex;box-sizing:border-box;flex-direction:column;justify-content:flex-start;width:100%;height:100%;">
+                              <p id="rvY7lIaz67aJOCGL" style="color:#ffffff;font-family:YAFdJt8dAY0-0;line-height:1.39772886em;text-align:center;">
+                                 <span id="CCJNg7feHv4Ofraj" style="color:#ffffff;">Projetos 3D</span>
+                                 <br>
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="EqVTlJZfxK96u2zt" style="z-index:2;">
+                        <div id="LdnCiIpb0adOqyVw" style="padding-top:56.25%;transform:rotate(0deg);">
+                           <div id="UvdD9Fkt55kk23Bw" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="x8f7uKvD4JH5Z3Gf" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="LdtDhKgKF7FxX2nK" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="v0uvTjKq4Gc7637t" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\sala.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="jkBH6CFR9aSsfVP4" style="z-index:4;">
+                        <div id="cZy20o2bPZCYmmGY" style="padding-top:56.25%;transform:rotate(0deg);">
+                           <div id="LhP3G5IhrcUIkBtt" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="xu4j8HO828Gm9AaV" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="ViWGavMatdJsafqP" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="JrjBqcROSTDN6JBE" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\churrasco.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="BOr6FFm4ZzM3pKgV" style="z-index:3;">
+                        <div id="ixWxLwengSZGaypd" style="padding-top:56.25%;transform:rotate(0deg);">
+                           <div id="J4ryp16AI1FXjn51" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="DPizYtWgWpnk96H6" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="NCQ5YtrJ0Z1iv4E0" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="K2g6uL7I1buhtbNK" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(100% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\cozinha.png" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="aWx2qZaTN91HEt1l" style="z-index:5;">
+                        <div id="v5OEuJp76tjrsBnD" style="padding-top:57.62514121%;transform:rotate(0deg);">
+                           <div id="KwJjTda2oiXljkhV" style="position:absolute;top:0px;left:0px;width:100%;height:100%;">
+                              <div id="qFisFGGqeoXZEBRf" style="width:100%;height:100%;opacity:1.0;">
+                                 <div id="dMUd7hpZQUvOMyQE" style="transform:scale(1, 1);width:100%;height:100%;overflow:hidden;position:relative;">
+                                    <div id="LnduyIwEzQJjnvYh" style="width:calc(100% * max(1, var(--scale-fill, 1)));height:calc(106.51481117% / min(1, var(--scale-fill, 1)));position:absolute;top:50%;left:50%;opacity:1.0;animation:pulse 1.5s ease-in-out infinite;">
+                                       <img src="C:\Users\Marcelo\Desktop\NovoPortfólio\imagens\interior.jpg" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%;transform:translate(-50%, -50%) rotate(0deg);">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <script nonce="2e7a481a-d10b-4f8c-8dd3-9c338815e15d">
+            ! function() {
+               "use strict";
+               const e = Array.from(document.getElementsByTagName("img")),
+                  t = e => {
+                     const t = e.parentElement;
+                     t && (t.style.animation = "none")
+                  };
+               e.forEach((e => {
+                  e.complete ? t(e) : e.addEventListener("load", (() => {
+                     t(e)
+                  }))
+               }))
+            }();
+         </script>
+         <script nonce="2e7a481a-d10b-4f8c-8dd3-9c338815e15d">
+            ! function() {
+               "use strict";
+
+               function t(t, n) {
+                  let e;
+                  return (...o) => {
+                     clearTimeout(e), e = setTimeout((() => {
+                        t(...o)
+                     }), n)
+                  }
+               }
+               class n {
+                  constructor() {
+                     this.callbacks = [], window.addEventListener("DOMContentLoaded", (() => this.onDOMContentLoaded()))
+                  }
+                  onDOMContentLoaded() {
+                     this.callbacks.sort(((t, n) => t.priority - n.priority)).forEach((({
+                        callback: t
+                     }) => t()))
+                  }
+                  runOnLoad(t) {
+                     "loading" === document.readyState ? this.callbacks.push(t) : t.callback()
+                  }
+               }
+
+               function e(t, e = Number.MAX_VALUE) {
+                  var o;
+                  (window.canva_scriptExecutor = null !== (o = window.canva_scriptExecutor) && void 0 !== o ? o : new n).runOnLoad({
+                     callback: t,
+                     priority: e
+                  })
+               }
+               class o {
+                  constructor(t) {
+                     this.items = [], this.previousWidth = document.documentElement.clientWidth, this.previousHeight = window.innerHeight;
+                     const n = t((() => this.onWindowResize()), 100);
+                     window.addEventListener("resize", n)
+                  }
+                  onWindowResize() {
+                     const t = document.documentElement.clientWidth,
+                        n = window.innerHeight,
+                        e = this.previousWidth !== t,
+                        o = this.previousHeight !== n;
+                     this.items.forEach((t => {
+                        const n = () => {
+                           t.callback(), t.executed = !0
+                        };
+                        (!t.executed || e && t.options.runOnWidthChange || o && t.options.runOnHeightChange) && n()
+                     })), this.previousWidth = t, this.previousHeight = n
+                  }
+                  runOnResize(t, n) {
+                     this.items.push({
+                        callback: t,
+                        options: n,
+                        executed: n.runOnLoad
+                     }), this.items.sort(((t, n) => t.options.priority - n.options.priority)), n.runOnLoad && e(t, n.priority)
+                  }
+               }
+
+               function i(n, e, i = t) {
+                  var r;
+                  (window.canva_debounceResize = null !== (r = window.canva_debounceResize) && void 0 !== r ? r : new o(i)).runOnResize(n, {
+                     runOnLoad: !1,
+                     runOnWidthChange: !0,
+                     runOnHeightChange: !1,
+                     priority: Number.MAX_VALUE,
+                     ...e
+                  })
+               }
+               const r = "--minfs",
+                  c = "--rzf",
+                  a = "--rfso",
+                  s = "--bfso";
+
+               function u(t, n, e = .001) {
+                  return Math.abs(t - n) < e
+               }
+
+               function d(t, n) {
+                  return window.getComputedStyle(t).getPropertyValue(n)
+               }
+
+               function l(t, n, e) {
+                  t.style.setProperty(n, e)
+               }
+
+               function m(t, n) {
+                  const e = document.createElement("div");
+                  e.style.setProperty(t, n), document.body.append(e);
+                  const o = d(e, t);
+                  return e.remove(), o
+               }
+
+               function f() {
+                  const t = function() {
+                        const t = parseFloat(m("font-size", "0.1px"));
+                        return t > 1 ? t : 0
+                     }(),
+                     n = function(t) {
+                        const n = 2 * Math.max(t, 1);
+                        return n / parseFloat(m("font-size", `${n}px`))
+                     }(t);
+                  if (function(t) {
+                        if (0 === t) return;
+                        l(document.documentElement, r, `${t}px`), i((() => {
+                           const n = 100 * t,
+                              {
+                                 clientWidth: e
+                              } = document.documentElement;
+                           l(document.documentElement, c, n > e ? (e / n).toPrecision(4) : null)
+                        }), {
+                           runOnLoad: !0
+                        })
+                     }(t * Math.max(1, n)), u(n, 1)) return;
+                  const e = u(parseFloat(d(document.documentElement, "font-size")), parseFloat(m("grid-template-columns", "1rem")));
+                  l(document.documentElement, e ? a : s, n.toPrecision(4))
+               }
+
+               function h() {
+                  document.querySelectorAll("img, image, video, svg").forEach((t => t.addEventListener("contextmenu", (t => t.preventDefault()))))
+               }
+               const p = t => {
+                  const n = {
+                     type: "CLICKED_LINK",
+                     link: t.currentTarget.getAttribute("href")
+                  };
+                  navigator.sendBeacon("_api/analytics/events", JSON.stringify(n))
+               };
+
+               function g() {
+                  [...document.querySelectorAll("a[href][data-interstitial-link]")].forEach((t => {
+                     t.addEventListener("click", p)
+                  }))
+               }
+               const v = "--sbw",
+                  w = "--inner1Vh";
+
+               function y(t, n, e) {
+                  t.style.setProperty(n, e)
+               }
+
+               function E() {
+                  y(document.documentElement, w, window.innerHeight / 100 + "px"),
+                     function() {
+                        const t = window.innerWidth - document.documentElement.clientWidth;
+                        y(document.documentElement, v, t >= 0 ? `${t}px` : null)
+                     }()
+               }
+               var b;
+               const O = "undefined" != typeof window ? null === (b = window.navigator) || void 0 === b ? void 0 : b.userAgent : void 0;
+               const L = !(!O || (A = O, !A.match(/AppleWebKit\//) || A.match(/Chrome\//) || A.match(/Chromium\//)));
+               var A;
+
+               function x() {
+                  document.querySelectorAll("svg").forEach((t => t.style.background = "url('data:image/png;base64,')"))
+               }
+               let C;
+
+               function W() {
+                  C || (C = Array.from(document.querySelectorAll("foreignObject")).filter((t => 0 === t.getBoundingClientRect().width)));
+                  const t = function() {
+                     const t = document.createElement("div");
+                     t.style.fontSize = "100vw", document.body.append(t);
+                     const n = parseFloat(window.getComputedStyle(t).fontSize);
+                     return t.remove(), n / window.innerWidth
+                  }();
+                  Array.from(C).forEach((n => function(t) {
+                     return new Promise(((n, e) => {
+                        const o = t.querySelector("img");
+                        o && !o.complete ? (o.addEventListener("load", (() => n())), o.addEventListener("error", (() => e()))) : n()
+                     }))
+                  }(n).finally((() => function(t, n) {
+                     const e = Array.from(t.children);
+                     e.forEach(((t, n) => {
+                        if (t.hasAttribute("data-foreign-object-container")) t.style.transformOrigin = "", t.style.transform = "";
+                        else {
+                           const o = document.createElement("div");
+                           o.setAttribute("data-foreign-object-container", ""), t.insertAdjacentElement("beforebegin", o), t.remove(), o.append(t), e[n] = o
+                        }
+                     }));
+                     const o = t.getScreenCTM();
+                     if (!o) return;
+                     const {
+                        a: i,
+                        b: r,
+                        c: c,
+                        d: a
+                     } = o.scale(n);
+                     e.forEach((t => {
+                        if (!t.hasAttribute("data-foreign-object-container")) return;
+                        const {
+                           style: n
+                        } = t;
+                        n.transformOrigin = "0px 0px", n.transform = `matrix(${i}, ${r}, ${c}, ${a}, 0, 0)`
+                     }))
+                  }(n, t)))))
+               } [function() {
+                  e(f)
+               }, function() {
+                  i(E, {
+                     runOnLoad: !0,
+                     runOnHeightChange: !0,
+                     priority: 1
+                  })
+               }, function() {
+                  L && i(W, {
+                     runOnLoad: !0
+                  })
+               }, function() {
+                  L && e(x)
+               }, function() {
+                  e(h)
+               }, function() {
+                  e(g)
+               }].forEach((t => t()))
+            }();
+         </script>
+      </div>
+      <script nonce="2e7a481a-d10b-4f8c-8dd3-9c338815e15d">
+         (function() {
+            if (!document.body) return;
+            var js = "window['__CF$cv$params']={r:'8827b7f2566af901',t:'MTcxNTQ4ODY5OS40MjYwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";
+            var _0xh = document.createElement('iframe');
+            _0xh.height = 1;
+            _0xh.width = 1;
+            _0xh.style.position = 'absolute';
+            _0xh.style.top = 0;
+            _0xh.style.left = 0;
+            _0xh.style.border = 'none';
+            _0xh.style.visibility = 'hidden';
+            document.body.appendChild(_0xh);
+
+            function handler() {
+               var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+               if (_0xi) {
+                  var _0xj = _0xi.createElement('script');
+                  _0xj.innerHTML = js;
+                  _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+               }
+            }
+            if (document.readyState !== 'loading') {
+               handler();
+            } else if (window.addEventListener) {
+               document.addEventListener('DOMContentLoaded', handler);
+            } else {
+               var prev = document.onreadystatechange || function() {};
+               document.onreadystatechange = function(e) {
+                  prev(e);
+                  if (document.readyState !== 'loading') {
+                     document.onreadystatechange = prev;
+                     handler();
+                  }
+               };
+            }
+         })();
+      </script>
+   </body>
+</html>
